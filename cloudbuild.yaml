@@ -19,9 +19,9 @@ steps:
       - '--artifact-url'
       - 'gcr.io/${PROJECT_ID}/helloworld:latest'
       - '--attestor'
-      - 'projects/${PROJECT_ID}/attestors/ATTESTOR_NAME'
+      - 'projects/${PROJECT_ID}/attestors/built-by-cloud-build'
       - '--keyversion'
-      - 'projects/${PROJECT_ID}/locations/KMS_KEY_LOCATION/keyRings/KMS_KEYRING_NAME/cryptoKeys/KMS_KEY_NAME/cryptoKeyVersions/KMS_KEY_VERSION'
+      - 'projects/${PROJECT_ID}/locations/global/keyRings/TestProjectKeyRing/cryptoKeys/BuildAttestatorKey/cryptoKeyVersions/1'
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
     args:
       - run
